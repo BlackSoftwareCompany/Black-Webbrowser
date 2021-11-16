@@ -765,6 +765,26 @@ class black_webbrowser(Tk):
         self.username = ""
     def main(self):
         global cmenu,label_s,x,next_list,back_list,menu,accountfile,searchfile
+        version = open("./Version/version.txt").read()
+        version_check = open("check_vi","r").read()
+        txt = """
+Whats Is News:
+        
+        1_ Account
+        2_ Right Click Menu
+        3_ add Speed Search Menu
+        4_ add graphical interface
+        5_ add Black-Translate
+        --
+Black-Webbrowser v2.0 Coming Soon
+        """
+        if version == 'True':
+            showinfo(title=f'{version}',message=txt)
+            version_check = open("check_vi","r+")
+            version_check.write("False")
+            version_check.close()
+        else:
+            pass
         x = 1
         next_list = []
         back_list = []
